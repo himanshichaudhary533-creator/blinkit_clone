@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        border: 2px solid red;
+        height: 50vh;
+        width: 30vw;
+        position: relative;
+        background-color: red;
+        z-index: 10000;
+    }
+
+    .label{
+        height: 30px;
+        width: 100px;
+        border: 1px solid green;
+        position: absolute;
+        right: -30px;
+        top: 10px;
+        background-color: aqua;
+        z-index: -100;
+
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="label">
+            New
+        </div>
+    </div>
+</body>
+</html>

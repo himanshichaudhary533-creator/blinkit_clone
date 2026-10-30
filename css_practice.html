@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        border-bottom: 1px solid lightgrey;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 50px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        background-color: white;
+        z-index: 100;
+
+    }
+
+    .logo {
+        color: green;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    .input {
+        width: 35%;
+        position: relative;
+    }
+
+    .input input {
+        width: 100%;
+        padding: 13px 30px;
+        border-radius: 10px;
+        border: 1px solid lightgrey;
+
+    }
+
+    .icon {
+        position: absolute;
+        top: 25%;
+        left: 10px;
+        font-size: 15px;
+    }
+
+    .nav-items {
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-items li {
+        list-style: none;
+
+
+    }
+
+    .nav-items li:hover {
+        cursor: pointer;
+    }
+
+    .hero {
+        border: 2px solid lightgrey;
+        height: 45vh;
+        border-radius: 20px;
+        margin: 0 50px;
+        background: linear-gradient(to right, #d8f3dc, #b7e4c7);
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 70px 50px;
+    }
+
+    .hero-wrapper {
+        padding: 70px 0 30px 0;
+        background-color: #f1f3f4;
+    }
+
+    .hero-text h1 {
+        font-size: 45px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    .hero-text p {
+        color: rgb(86, 85, 85);
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .hero-text button {
+        background-color: green;
+        padding: 13px 25px;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-weight: 500;
+
+    }
+
+    .hero-image {
+        font-size: 128px;
+    }
+
+    .dummy {
+        margin:0px 20px 0px ;
+        height: 100vh;
+        width:200vh;
+        border: 1px solid red;
+        display: block;
+    }
+
+    .grid{
+        height:200px;
+        width:180px;
+        border: 2px solid grey;
+        border-radius: 5%;
+        display:inline-block;
+        margin:20px 20px 20px 18px;
+        position: relative;
+    }
+    .minigrid{
+        height:120px;
+        border-radius: 5%;
+        display:grid;
+        grid-template-columns: 200px 200px 200px;
+        border:transparent; 
+        align-items: center;
+        font-size: 60px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin: 10px;
+        background-color: #d8f3dc;
+    }
+    .npw{
+        height:40px;
+        width:95%;
+        border: 2px solid white;
+        margin:20px 6px 10px 6px;
+    }
+    .price{
+        height:50%;
+        width:50;
+        border: 2px solid white;
+        color:rgb(27, 206, 27)
+    }
+
+    .category{
+        padding: 20px 50px;
+        border-bottom: 1px solid #e0e0e0;
+        position: sticky;
+        /* left:0;
+        right:0; */
+        top:70px;
+        z-index: 5000;
+        background-color: white;
+    }
+    .category h1{
+        margin-bottom: 20px;
+        font-size:24px;
+        
+    }
+
+    .cat-items{
+        width:35%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .box{
+        height:70px;
+        width:70px;
+        border-radius:50%;
+        background-color: #d8f3dc;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+
+    }
+
+    .cat-item-wrapper{
+        /* border: 1px solid black; */
+    }
+
+    .cat-item-wrapper p{
+        text-align: center;
+    }
+
+    .label{
+        position: absolute;
+        top: 5px;
+        right: 0;
+        background-color: red;
+        border: 2px solid white;
+        border-radius: 5px;
+        padding: 3px;
+        color: white;
+        font-size: 14px;
+    }
+</style>
+
+<body>
+
+    <nav>
+        <div class="logo">FreshMart</div>
+        <div class="input">
+            <input type="text" placeholder="Search fruits, vegitables..." />
+            <div class="icon">🔍</div>
+        </div>
+        <div class="nav-items">
+            <li>Home</li>
+            <li>Products</li>
+            <li>Cart</li>
+        </div>
+    </nav>
+    <main>
+        <div class="hero-wrapper">
+            <div class="hero">
+
+                <div class="hero-text">
+                    <h1>Fresh groceries <br>
+                        delivered to you.</h1>
+                    <p>Fruits, vegetables and daily essentials delivered fresh.</p>
+                    <button>Shop Now</button>
+                </div>
+
+                <div class="hero-image">
+                    🛒
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h1>Shop by Category</h1>
+
+            <div class="cat-items">
+
+                <div class="cat-item-wrapper">
+                    <div class="box">🍎</div>
+                    <p>Fruits</p>
+                </div>
+
+                <div class="cat-item-wrapper">
+                    <div class="box">🥦</div>
+                    <p>Vegetables</p>
+                </div>
+
+                <div class="cat-item-wrapper">
+                    <div class="box">🥛</div>
+                    <p>Dairy</p>
+                </div>
+                <div class="cat-item-wrapper">
+                    <div class="box">🍞</div>
+                    <p>Bakery</p>
+                </div>
+                <div class="cat-item-wrapper">
+                    <div class="box">🧃</div>
+                    <p>Drinks</p>
+                </div>
+
+
+            </div>
+        </div>
+
+      
+         
+
+    </div><div class="dummy">
+         <h1/id="pp">Popular Products</h1>
+         <div class="grid">
+            <div class="minigrid"><pre> 🍎</pre></div>
+            <div class="label"> 30% off </div>
+            <div class="npw"><b>Apple</b>
+                <div class="price"><b>$0.833/Kg</b></div>
+            </div>
+         </div>    
+         <div class="grid">
+            <div class="minigrid"><pre> 🥦</pre></div>
+            <div class="label">30% off</div>
+            <div class="npw"><b>Broccoli</b>
+                <div class="price"><b>$1.82/Kg</b></div>
+            </div>
+         </div>
+         <div class="grid">
+            <div class="minigrid"><pre> 🥛</pre></div>
+            <div class="label">30% off</div>
+            <div class="npw"><b>Fresh Milk</b>
+                <div class="price"><b>$0.75/Ltr</b></div>
+            </div>
+         </div>
+         <div class="grid">
+            <div class="minigrid"><pre> 🍞</pre></div>
+            <div class="label">30% off</div>
+            <div class="npw"><b>Fresh Bread</b>
+                <div class="price"><b>$0.52</b></div>
+            </div>
+         </div>
+         <div class="grid">
+            <div class="minigrid"><pre> 🧃</pre></div>
+            <div class="label">30% off</div>
+             <div class="npw"><b>Cold Drinks</b>
+                 <div class="price"><b>$1.04/2Ltr</b></div>
+            </div>
+         </div>
+         <div class="grid">
+            <div class="minigrid"><pre> 🥚</pre></div>
+            <div class="label">30% off</div>
+             <div class="npw"><b>Eggs</b>
+               <div class="price"><b>$1.00/25Pcs</b></div>
+             </div>
+         </div>
+         <div class="grid">
+            <div class="minigrid"><pre> 🥑</pre></div>
+            <div class="label">30% off</div>
+             <div class="npw"><b>Avacado</b>
+            <div class="price"><b>$4.45/Kg</b></div>
+             </div>
+         </div>
+       
+         <div class="grid">
+            <div class="minigrid"><pre> 🧈</pre></div>
+            <div class="label">30% off</div>
+            <div class="npw"><b>Fresh Butter</b>
+            <div class="price"><b>$3.33/Kg</b></div>
+             </div>
+         </div>
+         <div class="grid">
+            <div class="minigrid"><pre> 🥥</pre></div>
+            <div class="label">30% off</div>
+             <div class="npw"><b>Coconut</b>
+                <div class="price"><b>$0.83/kg</b></div>
+             </div>
+         </div>
+
+
+    </div>
+
+    </main>
+
+    
+ 
+
+    
+
+</body>
+
+</html>
+    
+   
+      
